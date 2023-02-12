@@ -1,0 +1,89 @@
+.position {
+    margin: 100px;
+    color: white;
+    opacity: 1 ;
+    position: absolute;
+    font-family: Courier, monospace;
+}
+.button {
+    background-color: #4fc3dc;
+    width: 70px;
+    height: 20px;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{   
+    background-color: black !important;
+    background-image: url(images/2.jpg) !important;
+    background-size: 700px !important;
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
+    min-height: 100vh;
+    background: #0c1920;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 0%;
+}
+.bubbles {
+    position: relative;
+    display: flex;
+}
+.bubbles span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px whitesmoke, 0 0 50px yellow, 0 0 100px yellowgreen;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(90s / var(--i));
+}
+.bubbles span:nth-child(even)
+{   background: yellow;
+    box-shadow: 0 0 0 10px yellowgreen, 0 0 50px yellow, 0 0 100px yellow;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(110vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.rounded-img {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+.navbar-nav .dropdown-menu {
+    position: none !important;
+}
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+    --bs-offcanvas-zindex: 1045 !important;
+    --bs-offcanvas-width: 230px !important;
+    --bs-offcanvas-height: 30vh !important;
+    --bs-offcanvas-padding-x: 3rem !important;
+    --bs-offcanvas-padding-y: 2rem !important;
+    --bs-offcanvas-color: var(--bs-body-color);
+    --bs-offcanvas-bg: var(--bs-body-bg);
+    --bs-offcanvas-border-width: var(--bs-border-width);
+    --bs-offcanvas-border-color: var(--bs-border-color-translucent);
+    --bs-offcanvas-box-shadow: 0 0.125rem 0.25remrgba(var(--bs-body-color-rgb), 0.075);
+    --bs-offcanvas-transition: transform 0.2s ease-in-out;
+    --bs-offcanvas-title-line-height: 1.5;
+}
+.dropdown-menu
+{background-color: black var(--bs-dropdown-bg);}
